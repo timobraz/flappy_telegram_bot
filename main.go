@@ -25,7 +25,7 @@ func main() {
 	for update := range updates {
 		if update.Message != nil { // If we got a message{
 			if strings.Contains("@catty_flappy_bot", update.Message.Text) {
-				log.Printf("[%s] %s", update.Message.From.UserName, update.Message.Text)
+				log.Printf("[%s] %s", update.Message.From.UserName, "https://timobraz.github.io/cat-flappy")
 				msg := tgbotapi.NewMessage(update.Message.Chat.ID, update.Message.Text)
 				msg.ReplyToMessageID = update.Message.MessageID
 				bot.Send(msg)
